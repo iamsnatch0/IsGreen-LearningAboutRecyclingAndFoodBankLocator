@@ -1,0 +1,25 @@
+
+/* font-family: Lato */
+@font-face{
+  font-family: Lato;
+  src:url('../fonts/Lato/Lato-Black.ttf')
+}
+
+/* font-family: Poppins */
+@font-face{
+  font-family: Poppins;
+  src: url('../fonts/Poppins/Poppins-Black.ttf');
+}
+
+/* font-family: Ubuntu */
+@font-face{
+    font-family: Ubuntu;
+    src:url('../fonts/Ubuntu/Ubuntu-Bold.ttf')
+  }
+  
+  /* font-family: Yusei_Magic */
+  @font-face{
+    font-family: Yusei_Magic;
+    src: url('../fonts/Yusei_Magic/YuseiMagic-Regular.ttf');
+  }
+

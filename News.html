@@ -1,0 +1,358 @@
+<?php 
+session_start();
+
+if (isset($_SESSION['id']) && isset($_SESSION['user_name'])) {
+
+ ?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News</title>
+
+
+    <!--Font Awesome Icons-->
+    <link rel="stylesheet" href="./CSS/all.css">
+     
+    <!--------------Owl-Carousel---------------->
+    <link rel="stylesheet" href="./CSS/owl.carousel.min.css">
+    <link rel="stylesheet" href="./CSS/owl.theme.green.min.css">
+
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="./CSS/Style.css">
+
+</head>
+
+
+<body>
+    
+    <!------------------------- Navigation ---------------------------->
+  
+    <nav class="nav">
+      <div class="nav-menu flex-row">
+        <div class="nav-brand">
+          <a href="index.html" class="text-gray">IsGreen</a>
+        </div>
+        <div class="toggle-collapse">
+          <div class="toggle-icons">
+              <i class="fas fa-bars"></i>
+          </div>
+        </div>
+        <div>
+            <ul class="nav-items">
+                <li class="nav-link">
+                    <a href="index.html">Home</a>
+                </li>
+                <li class="nav-link">
+                    <a href="Learn-About-Recycling.html"> Learn About Recycling </a>
+                </li>
+                <li class="nav-link">
+                    <a href="Give-food.html">Find Food Bank</a>
+                </li>
+                <li class="nav-link">
+                    <a href="Educative-Videos.html">Educative Videos</a>
+                </li>
+                <li class="nav-link">
+                    <a href="News.html">News</a>
+                </li>
+                <li class="nav-link">
+                    <a href="Contact-Us.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="social text-gray">
+        Hello, <?php echo $_SESSION['name']; ?>
+        <a href="logout.php">Logout</a>
+        <?php 
+}else{
+     header("Location: LoginSection.php");
+     exit();
+}
+ ?>
+        </div>
+      </div>
+  </nav>
+
+    <!-----------x-------------- Navigation ----------------x------------>
+
+
+    <!-------------------------- Main Site Section ------------------>
+
+ 
+  <section class="banner">
+    <div class="banner-main-content">
+      <h2>GET THE LATEST RECYCLING AND FOOD SHARING NEWS</h2>
+      <h3>United Kingdom's Leading News Portal</h3>
+      
+
+      <button>
+        <a href="https://www.letsrecycle.com/" >Read More</a>
+      </button>
+      
+
+
+      <div class="current-news-head">
+        <a href="https://www.letsrecycle.com/news/latest-news/ne-lincs-to-collect-paper-on-four-weekly-basis/">
+        <h3>NE Lincs to collect paper on four-weekly basis <span>by Steve Eminton</span></h3>
+      </a>
+        <a href="https://www.letsrecycle.com/news/latest-news/cut-vat-on-recycled-materials-say-mps/">
+        <h3>‘Cut VAT on recycled materials,’ say MPs’<span>by James Langley</span></h3>
+      </a>
+
+
+       <a href="https://www.letsrecycle.com/news/latest-news/zero-waste-creates-more-jobs-gaia-says/">
+        <h3>‘Zero waste’ creates more jobs, GAIA says<span>by James Langley</span></h3>
+      </a>
+      <a href="https://www.letsrecycle.com/news/latest-news/paper-round-installs-compostables-sorting-line/">
+
+        <h3>Paper Round installs compostables sorting line <span>by Robyn White</span></h3>
+      </a>
+      </div> 
+    </div>
+
+    
+    <div class="banner-sub-content">
+      <div class="hot-topic">
+        <img src="./media/1_Woman-slams-Free-School-Meal-10-day-contents-I-would-have-rather-the-£30.jpg" alt="">
+
+        <div class="hot-topic-content">
+
+
+        <b style="font-size:25px;color:rgb(7, 7, 7);">Free lunch, anyone? Foodsharing sites and 
+           apps stop leftovers going to waste</b>
+
+          <a href="https://www.mirror.co.uk/news/uk-news/angry-parents-share-free-school-23303011">Read More</a>
+        </div>
+      </div>
+
+      
+      <div class="hot-topic">
+        <img src="./media/Double-dipping crisps.jpg" alt="">
+
+        <div class="hot-topic-content">
+          <b style="font-size:25px;color:rgb(7, 7, 7);">We ask the experts whether five common,food sharing habits are safe.</b>
+          <a href="https://www.bbc.co.uk/food/articles/sharing_food_safety">Read More</a>
+        </div>
+      </div>
+
+      <div class="hot-topic">
+        <img src="./media/_110534621_hi030533292.jpg" alt="">
+
+        <div class="hot-topic-content">
+          <b style="font-size:25px;color:rgb(7, 7, 7);">Recycling household waste in London 'impossible'</b>
+
+          
+          <a href="https://www.bbc.co.uk/news/uk-england-london-51135424">Read More</a>
+        
+        </div>
+      </div>
+
+      <div class="hot-topic">
+        <img src="./media/Houses-768x366.png" alt="">
+
+        <div class="hot-topic-content">
+          <b style="font-size:25px;color:rgb(7, 7, 7);">A lack of structured rules around chores in houses of 
+            multiple occupation (HMOs) in London leads... </b>
+
+          
+          <a href="https://www.letsrecycle.com/news/latest-news/lack-of-rules-breeds-inconsistent-recycling-in-london-hmos/">Read More</a>
+        </div>
+      </div>
+      <a href="#waste" class="arrow">
+        <i class="fa fa-angle-down"></i>
+     </a>
+    </div>
+
+  </section>
+  
+  <hr>
+
+  <main>
+    <section class="main-container-left">
+      
+      <div class="container-top-left">
+        <article id="waste">
+          
+          <div>
+            <h2>WASTE AND RECYCLING COLLECTIONS DURING THE COVID-19 CRISIS</h2>
+            <p style="font-size:25px">Local authorities across the UK are working hard to provide the best possible service during the COVID-19 crisis.
+               Waste and recycling crews are designated key workers, and they are doing a fantastic job.
+              As most of us are now staying at home, more household waste will put pressure on recycling and waste services. Staff shortages may mean 
+              changes to services like garden waste collections and removal of bulky items like mattresses, white goods or furniture. 
+              However many local Household Waste Recycling Centres  (HWRCs) are now open.................... </p>
+
+               <a href="https://www.recyclenow.com/news/2020-03-27-waste-recycling-collections-covid-19">Read More <span>>>></span></a> 
+          </div>
+           </article>
+            </div>
+
+          <div class = "container-bottom-left">
+            <article>
+              <img src="./media/273222012.gallery.jpg">
+              <div>
+                <h3>Food waste sharing scheme starts in Wemyss Bay</h3>
+                <p style="font-size:25px">Local teacher Beth MacLeod, pictured far left, has been working with Creative Inverclyde to combat poverty and deliver digital devices to youngsters who are home-learning. 
+                  The big-hearted Inverkip Primary teacher also decided to look at 
+                  other ways she could assist local families during the pandemic. She then teamed up with Belville Community Garden to start a local foodshare.</p>
+
+                  <a href="https://www.greenocktelegraph.co.uk/news/19043100.food-waste-sharing-scheme-starts-wemyss-bay/">Read More 
+                    <span>>></span></a>
+              </div>
+            </article>
+
+            <article>
+              <img src="./media/resize ldy.jpg">
+              <div>
+                <h3>Network of 11 food banks sharing Hyndburn £127k funding pot</h3>
+                <p style="font-size:25px">A network of food banks across Hyndburn is being co-ordinated to share emergency government funding of more than £120,000 to help those in urgent need of help. 
+                  A £127,658 Emergency Assistance Grant (EAG) was allocated to the borough to help people in immediate short-term need of resources, such as food or essential items. 
+                  The government grant will be delivered in by charity Maundy Relief, of Accrington, Lancashire through a network of 11 local food banks.</p>
+
+                  <a href="https://www.inyourarea.co.uk/news/network-of-11-food-banks-sharing-hyndburn-127k-funding-pot/">Read More 
+                    <span>>></span></a>
+              </div>
+            </article>
+          </div>
+    </section>
+
+    <section class="main-container-right">
+      <h2>Latest Stories</h2>
+
+      <article>
+        <h4 style="font-size:18px">Just in</h4>
+        <div>
+          <h2 style="font-size:30px">9 best reusable coffee cups that aren’t adding to landfill</h2>
+
+          <p style="font-size:25px">In 2020, apparently, having a reusable coffee cup is almost a fashion accessory – an item that suggests you care about the planet, that you know all 
+            sorts of superfluous facts about coffee, and that you have impeccable taste because you’ve coordinated your cup with your phone cover.</p>
+
+            <a href="#">Read More <span>>>></span></a>
+        </div>
+        <img src="./media/cup.jpg">
+
+      </article>
+
+
+      <article>
+        <h4 style="font-size:18px">Just in</h4>
+        <div>
+          <h2 style="font-size:30px">9 best recycling bins that help you do your bit for the environment</h2>
+
+          <p style="font-size:25px">Paper, plastic, non-recyclable materials and food – sometimes keeping tabs on what goes where in the bin can be a headache, and that’s before you start to negotiate rubbish collection timetables. 
+            Check your council’s website to see what’s recycled in your area, then make things easier from the start by sorting trash as you throw it away.</p>
+
+            <a href="https://www.independent.co.uk/extras/indybest/house-garden/kitchen-accessories/best-recycling-bins-9988642.html">Read More <span>>>></span></a>
+        </div>
+        <img src="./media/Recycling bins.jpg">
+
+      </article>
+
+      <article>
+        <h4 style="font-size:18px">Just in</h4>
+        <div>
+          <h2 style="font-size:30px">14 best reusable water bottles that are better for the planet</h2>
+
+          <p style="font-size:25px">Currently, it is believed that the UK consumes 14.1bn drinks bottles and more than 4bn hot drink cups in a single year; no wonder our oceans are drowning in plastic. We can all do our bit by swearing off single-use plastic
+             water bottles and switching to a reusable version: every person buying one reusable bottle instead of a daily single-use plastic bottle could prevent over 1,000
+             plastic bottles littering the ocean over three years, as well as saving £1,000 by not purchasing mineral water so it’s a no-brainer.</p>
+
+            <a href="https://www.independent.co.uk/extras/indybest/outdoor-activity/sports-equipment-accessories/best-reusable-water-bottle-a9388851.html">Read More <span>>>></span></a>
+        </div>
+        <img src="./media/best-reusbale-water-bottles-indybest.jpg">
+
+      </article>
+
+      <article>
+        <h4 style="font-size:18px">Just in</h4>
+        <div>
+          <h2 style="font-size:30px">Recycle Week: The environmentally-friendly swaps to make, from clothing to homewares</h2>
+
+          <p style="font-size:25px">From 21 to 27 Septemeber, it’s Recycle Week, an annual campaign that celebrates and encourages all things recycling, organised by the Waste and Resources Action Programme (Wrap). This year’s theme, 
+            “Thanking The Nation: Together – We Recycle”, focuses on recognising the efforts of recycling
+             and waste key workers who continued to work throughout the pandemic, and thanking the public for continuing to recycle during Covid-19.</p>
+
+            <a href="https://www.independent.co.uk/extras/indybest/recycle-week-national-awareness-plastic-clothes-household-waste-reuse-b450978.html">Read More <span>>>></span></a>
+        </div>
+        <img src="./media/recycle week indybest.jpg">
+
+      </article>
+
+      <article>
+        <h4 style="font-size:18px">Just in</h4>
+        <div>
+          <h2 style="font-size:30px">Children ‘shame’ parents for poor recycling knowledge</h2>
+
+          <p style="font-size:25px">Nearly half of parents have been shamed by their own children for bad recycling practices. A poll of 2,000 parents of school-aged children found 40 per cent believed their offspring drive recycling and sustainability
+             attitudes at home, thanks to the popularity of teenage environmental campaigner Greta Thunberg.</p>
+
+            <a href="https://www.independent.co.uk/climate-change/news/recycle-children-parents-tin-can-greta-thunberg-a9545031.html">Read More <span>>>></span></a>
+        </div>
+        <img src="./media/istock-613658308.jpg">
+
+      </article>
+
+    </section>
+  </main>
+      
+
+
+
+
+   <!-------------x------------- Main Site Section --------x---------->
+
+
+
+
+     <!--------------------------- Footer ------------------------------->
+
+
+     
+<footer class="footer">
+    <div class="container">
+        <div class="about-us">
+            <h2>About us</h2>
+            <p style="font-size:24px;">IsGreen is an application created to reduce food waste in the United Kingdom and 
+            allow users to find locations where they can drop food for other users in need.</p>
+        </div>
+        
+        <div class="about-us">
+            <h2>Email</h2>
+            <p style="font-size:24px;"> Contact us for any help <br> isgreen@mail.com</p>
+        </div>
+        
+        <div class="follow">
+            <h2>Follow</h2>
+            <p style="font-size:24px;">Let us connect to help</p>
+            <div>
+                <a href="https://www.facebook.com/is.green.509/"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.youtube.com/channel/UC8tyNRDJGAdp1DzPO4WXFIQ"><i class="fab fa-youtube-square"></i></a>
+                <a href="https://www.instagram.com/isgreen0/"><i class="fab fa-instagram-square"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+ <!----------------x----------- Footer ----------------x--------------->
+
+
+
+
+<!--Jquery Library -->
+   <script src="./js/jquery3.5.1.min.js"></script>
+
+
+   <!--------------Owl-Carousel js---------------->
+   <script src="./js/owl.carousel.min.js"></script>
+ 
+   <!--Custom Javascript file-->
+   <script src="./js/main.js"></script>
+ </body>
+ 
+ </html>
